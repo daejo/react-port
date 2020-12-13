@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { capitalizeFirstLetter } from '../../utils/helpers';
 
 function Nav(props) {
     const {
@@ -8,23 +9,21 @@ function Nav(props) {
       } = props;
     
     useEffect(() => {
-        document.title = currentPage.name;}, [currentPage]);
-    
-    pages.map((page) => (
-        console.log(page.name)
-    ))
-        
+        document.title = capitalizeFirstLetter(currentPage.name);}, [currentPage]);
+
     return (
         <nav>
-            <ul>
-                {pages.map((page) => (
-                    <li className={`${currentPage.name === page.name && `navActive`}`} key={page.name}>
-                    <span onClick={() => {
-                        setCurrentPage(page);}}> {page.name}                             
-                    </span>
-                    </li>
-                ))}
-            </ul>
+            <h1>
+                <ul>
+                    {pages.map((page) => (
+                        <li className={`${currentPage.name === page.name && `navActive`}`} key={page.name}>
+                        <span onClick={() => {
+                            setCurrentPage(page);}}> {capitalizeFirstLetter(page.name)}                             
+                        </span>
+                        </li>
+                    ))}
+                </ul>
+            </h1>
         </nav>
     );
 }
