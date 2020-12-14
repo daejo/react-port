@@ -17,9 +17,10 @@ function Nav(props) {
                 <ul>
                     {pages.map((page) => (
                         <li className={`${currentPage.name === page.name && `navActive`}`} key={page.name}>
-                        <span onClick={() => {
-                            setCurrentPage(page);}}> {capitalizeFirstLetter(page.name)}                             
-                        </span>
+                            <a href={`#${currentPage.name}`} onClick={() => {
+                                setCurrentPage(page);}}>
+                                {capitalizeFirstLetter(page.name)}                             
+                            </a>    
                         </li>
                     ))}
                 </ul>
