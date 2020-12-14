@@ -68,3 +68,20 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+div.container {
+  background-size: auto;
+  align-items: center;
+  padding: 2% 5%;
+}
+
+.textbox {
+  opacity: 40%;
+  background-color: #ffffff;
+  border-radius: 3%;
+}
+
+.contact-box {
+  background-color: var(--secondary-color);
+  padding: 5%;
+}

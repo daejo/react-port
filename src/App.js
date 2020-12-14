@@ -3,7 +3,8 @@ import './App.css';
 import djIcon from './assets/img/dj-icon.svg'
 import Nav from './components/Nav';
 import Header from './components/Header'
-import Pages from './components/Pages';
+import Page from './components/Pages';
+import Contact from './components/Contact'
 
 function App() {
 
@@ -15,19 +16,28 @@ function App() {
   ]);
 
   const [currentPage, setCurrentPage] = useState(pages[0]);
+  const [contactSelected, setContactSelected] = useState(false);
 
   return (
       <>
-            <Header>  
-                  <img src={djIcon} style={{ width: "7% "}} alt="dj insignia" />   
-                <Nav
-                    pages={pages}
-                    setCurrentPage={setCurrentPage}
-                    currentPage={currentPage}>
-                </Nav>
-            </Header>
+          <Header>  
+                <img src={djIcon} style={{ width: "7% "}} alt="dj insignia" />   
+              <Nav
+                  pages={pages}
+                  setCurrentPage={setCurrentPage}
+                  currentPage={currentPage}
+                  contactSelected={contactSelected}
+                  setContactSelected={setContactSelected}>
+              </Nav>
+          </Header>
           <main>
-              <Pages currentPage={currentPage} />
+            {!contactSelected ? (
+              <>
+                <Page currentPage={currentPage} />
+              </>
+              ) : (
+                <Contact />
+              )}  
           </main>
       </>
   );
