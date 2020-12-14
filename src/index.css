@@ -84,4 +84,37 @@ div.container {
 .contact-box {
   background-color: var(--secondary-color);
   padding: 5%;
+  overflow:auto;
 }
+
+.submit-form {
+  align-items: center;
+  background-color: #ffffff;
+  color: var(--secondary-color);
+  border-style: hidden;
+  border-radius: 7%;
+  padding-top: .3%;
+}
+
+#left, #right {
+  width: 40%; 
+  margin:5px; 
+  padding: 1em; 
+}
+
+#left  { float:left;  }
+#right { float:right; }
+
+#contact-info p {
+  padding: .5%;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+#contact-info img {
+  filter: invert(1);
+  margin: 0% 3% 0% 0%;
+}
+
+

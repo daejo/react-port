@@ -4,7 +4,6 @@ import djIcon from './assets/img/dj-icon.svg'
 import Nav from './components/Nav';
 import Header from './components/Header'
 import Page from './components/Pages';
-import Contact from './components/Contact'
 
 function App() {
 
@@ -31,13 +30,7 @@ function App() {
               </Nav>
           </Header>
           <main>
-            {!contactSelected ? (
-              <>
                 <Page currentPage={currentPage} />
-              </>
-              ) : (
-                <Contact />
-              )}  
           </main>
       </>
   );

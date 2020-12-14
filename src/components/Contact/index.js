@@ -1,5 +1,9 @@
 import React, { useState } from 'react';
 import { validateEmail, capitalizeFirstLetter } from '../../utils/helpers';
+import sendIcon from '../../assets/img/paperplane.png';
+import emailIcon from '../../assets/img/email-icon.png';
+import addressIcon from '../../assets/img/address-icon.png';
+import phoneIcon from '../../assets/img/phone-icon.png';
 
 function Contact() {
     const [formState, setFormState] = useState( { name: '', email: '', message: ''});
@@ -36,27 +40,40 @@ function Contact() {
 
     return (
         <section className="contact-box">
-            <h1>Send me a message</h1>
-            <form id="contact-form" onSubmit={handleSubmit}>
-                <div>
-                    <p><label htmlFor="name">Name:</label></p>
-                    <input class="textbox" type="text" defaultValue={name} onBlur={handleChange} name="name" />
-                </div>
-                <div>
-                    <p><label htmlFor="email">Email address:</label></p>
-                    <input class="textbox" type="email" defaultValue={email} onBlur={handleChange} name="email" />
-                </div>
-                <div>
-                    <p><label htmlFor="message">Message:</label></p>
-                    <textarea class="textbox" name="message" defaultValue={message} onBlur={handleChange} rows="5" />
-                </div>
-                {errorMessage && (
+            <div id="left">
+                <h1>Send me a message</h1>
+                <form id="contact-form" onSubmit={handleSubmit}>
                     <div>
-                        <p className="error-text">{errorMessage}</p>
+                        <p><label htmlFor="name">Name:</label></p>
+                        <input class="textbox" type="text" defaultValue={name} onBlur={handleChange} name="name" />
                     </div>
-                )}
-                <button type="submit">Submit</button>
-            </form>
+                    <div>
+                        <p><label htmlFor="email">Email address:</label></p>
+                        <input class="textbox" type="email" defaultValue={email} onBlur={handleChange} name="email" />
+                    </div>
+                    <div>
+                        <p><label htmlFor="message">Message:</label></p>
+                        <textarea class="textbox" name="message" defaultValue={message} onBlur={handleChange} rows="5" />
+                    </div>
+                    {errorMessage && (
+                        <div>
+                            <p className="error-text">{errorMessage}</p>
+                        </div>
+                    )}
+                    <p>
+                        <button class="submit-form" type="submit"><img src={sendIcon} style={{ width:"20%"}} alt='paper plane icon' /> Submit</button>
+                    </p>
+                </form>
+            </div>
+
+            <div id="right">
+                <h1>Contact info</h1>
+                    <div id="contact-info">
+                        <p><img src={phoneIcon} style={{ width:"6%"}} alt="phone icon"/>661-437-9550</p>
+                        <p><img src={emailIcon} style={{ width:"6%"}} alt="phone icon"/>daejo@icloud.com</p>
+                        <p><img src={addressIcon} style={{ width:"6%"}} alt="phone icon"/>San Franciso, CA</p>
+                    </div>
+            </div>
         </section>
       )
 }
