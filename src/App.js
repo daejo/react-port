@@ -4,6 +4,7 @@ import djIcon from './assets/img/dj-icon.svg'
 import Nav from './components/Nav';
 import Header from './components/Header'
 import Page from './components/Pages';
+import Footer from './components/Footer';
 
 function App() {
 
@@ -15,23 +16,21 @@ function App() {
   ]);
 
   const [currentPage, setCurrentPage] = useState(pages[0]);
-  const [contactSelected, setContactSelected] = useState(false);
 
   return (
       <>
           <Header>  
-                <img src={djIcon} style={{ width: "7% "}} alt="dj insignia" />   
+                <img src={djIcon} id="dj-icon" alt="dj insignia" />   
               <Nav
                   pages={pages}
                   setCurrentPage={setCurrentPage}
-                  currentPage={currentPage}
-                  contactSelected={contactSelected}
-                  setContactSelected={setContactSelected}>
+                  currentPage={currentPage}>
               </Nav>
           </Header>
           <main>
                 <Page currentPage={currentPage} />
           </main>
+          <Footer />
       </>
   );
 }

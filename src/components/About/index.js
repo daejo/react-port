@@ -10,7 +10,7 @@ function About() {
     <section id="splash" >
       <div id="splash-left">
         <p>
-          <img src={splashLogo} alt="face logo"/>
+          <img src={splashLogo} alt="face logo" id="splash-logo"/>
         </p>
       </div>
       <div id="splash-right">

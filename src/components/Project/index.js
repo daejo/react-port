@@ -1,43 +1,29 @@
-import React, { useState } from 'react';
-// import Modal from '../Modal';
+import React from 'react';
 
 const Project = ({ project, i }) => {
 
-    
-    // const [currentPhoto, setCurrentPhoto] = useState()
-    // const toggleModal = (image, i) => {
-    //     setCurrentPhoto({...image, index: i});
-    //     setIsModalOpen(!isModalOpen);
-    // }
-    // const [isModalOpen, setIsModalOpen] = useState(false); 
-    // const currentPhotos = project.filter((project) => photo.name === name);
 
   return (
-    <div>
-    {/* {isModalOpen && (
-        <Modal currentPhoto={currentPhoto} onClose={toggleModal} />
-    )} */}
-        <div className="flex-container">
-            <div className="flex-row">
+        <div className="project-container">
+            <div className="project-row">
                 <h3>{project.name}</h3>
             </div>
-            <div className="flex-row">
+            <div className="project-row">
                 <p>{project.description}</p>
             </div>
-            <div className="flex-row">
-                <img src={require(`../../assets/img/projects/${i+1}.png`).default} alt="project completed by myself"></img>
+            <div>
+                <img src={require(`../../assets/img/projects/${i+1}.png`).default} alt="project completed by myself" class="project-img" />
             </div>
-            <div className="flex-row">
-                <p><a href={project.link} target="blank">
-                    Visit Deployed Application
-                </a></p>
-                <p><a href={project.github} target="blank">
-                    Visit Github Repository
-                </a></p>
-            
+            <div>
+                <p id="weblink-p">
+                <a href={project.link} target="blank" class="project-links">
+                    Deployed App </a>
+                  || <a href={project.github} target="blank" class="project-links">
+                        Github Repo
+                    </a>
+                </p>
             </div>
-        </div>
-    </div>    
+        </div> 
     );
 };
 

@@ -11,7 +11,7 @@ function Portfolio() {
         },
         {
             name: 'Code Quiz',
-            description: 'A timed quiz that gauges your knowledge regarding JavaScript.',
+            description: 'Review App for javascript.',
             link: 'https://daejo.github.io/code-quiz/',
             github: 'https://github.com/daejo/code-quiz'
         },
@@ -41,24 +41,14 @@ function Portfolio() {
         },
     ])
 
-    return (
-        <div id="content">
-            <div class="post-container">
-                <div class="post">
-                    <div class="post-author">
-                        <h1>Portfolio</h1>
-                    </div>
-                    
-                    <div>
-                        {projects.map((project, i) => (
-                            <Project
-                                project={project}
-                                i={i}
-                            />
-                        ))}
-                    </div>
-                </div>
-            </div>
+    return (   
+        <div class="portfolio-grid">
+            {projects.map((project, i) => (
+                <Project
+                    project={project}
+                    i={i}
+                />
+            ))}
         </div>
     );
 }
