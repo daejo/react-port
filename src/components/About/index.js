@@ -1,14 +1,26 @@
 import React from 'react';
+import splashLogo from '../../assets/img/splash-logo.png';
+import behanceLogo from '../../assets/img/behance-icon.png';
+import linkedinLogo from '../../assets/img/linkedin-icon.png';
+import githubLogo from '../../assets/img/github-icon.png';
 
 function About() {
 
   return (
-    <section className="my-5" >
-      <h1 id="about">Who am I?</h1>
-      <div className="my-2">
+    <section id="splash" >
+      <div id="splash-left">
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec bibendum turpis sed ex condimentum molestie. Mauris condimentum lectus ut ornare dignissim. Mauris faucibus urna mi, ac feugiat metus aliquam maximus. Proin aliquam justo nec diam vulputate vestibulum. Aenean sollicitudin nulla at nisi ornare, nec suscipit massa eleifend. Morbi tristique justo vel turpis sollicitudin, et tristique velit convallis. In hac habitasse platea dictumst. Phasellus mattis nunc sed orci consequat laoreet. Praesent id nisl nibh. Curabitur imperdiet ultricies mollis. In hac habitasse platea dictumst.
+          <img src={splashLogo} alt="face logo"/>
         </p>
+      </div>
+      <div id="splash-right">
+        <p class="splashhead">Hi I am</p>
+        <p class="splashhead">//David Joaquin//</p>
+        <div class="splash-images">
+          <img src={behanceLogo} alt="behance logo"/>
+          <img src={linkedinLogo} alt="linkedin logo"/>
+          <img src={githubLogo} alt="github logo"/>
+        </div>
       </div>
     </section>
   )

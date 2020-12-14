@@ -72,15 +72,16 @@ code {
 div.container {
   background-size: auto;
   align-items: center;
-  padding: 2% 5%;
+  padding: 2% 10%;
 }
 
+/* CONTACT CSS START */
 .textbox {
   opacity: 40%;
   background-color: #ffffff;
   border-radius: 3%;
 }
-
+/* overflow takes care of creating columns + #left #right floats */
 .contact-box {
   background-color: var(--secondary-color);
   padding: 5%;
@@ -116,5 +117,35 @@ div.container {
   filter: invert(1);
   margin: 0% 3% 0% 0%;
 }
+/* CONTACT CSS END */
 
+/* SPLASH PAGE CSS START */
+#splash {
+  overflow:auto;
+}
 
+#splash-left {float:left;}
+#splash-right {
+  float: right;
+  margin: 30px;
+}
+
+#splash-right p.splashhead {
+  font-size: 7vw;
+  margin: 1vw;
+}
+
+/* PORTFOLIOS LOGO ANIMATION CSS START*/
+#splash-right img {
+  padding: 10px 20px 0px 20px;
+  transition: 1s ease;
+  object-fit: cover;
+}
+  
+#splash-right img:hover{
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+  transition: 1s ease;
+}
+/* PORTFOLIOS LOGO ANIMATION CSS END*/
