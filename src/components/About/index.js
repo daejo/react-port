@@ -17,9 +17,9 @@ function About() {
         <p class="splashhead">Hi I am</p>
         <p class="splashhead">//David Joaquin//</p>
         <div class="splash-images">
-          <img src={behanceLogo} alt="behance logo"/>
-          <img src={linkedinLogo} alt="linkedin logo"/>
-          <img src={githubLogo} alt="github logo"/>
+          <a href="https://www.behance.net/davidjoaquin" target="_blank"><img src={behanceLogo} alt="behance logo"/></a>
+          <a href="https://www.linkedin.com/in/david-joaquin" target="_blank"><img src={linkedinLogo} alt="linkedin logo"/></a>
+          <a href="https://github.com/daejo" target="_blank"><img src={githubLogo} alt="github logo"/></a>
         </div>
       </div>
     </section>

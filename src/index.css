@@ -64,6 +64,10 @@ header nav ul li a:hover {
   text-shadow: none;
 }
 
+header nav ul li.navActive a {
+  color: var(--tertiary-color)
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
