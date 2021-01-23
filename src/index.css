@@ -253,6 +253,8 @@ footer a {
 footer div {
   padding: 20px 30px 0px 0px;
 }
+
+/* Responsive to iphone X */
 @media only screen and (max-width: 1189px) {
   .container {
     position: absolute; 

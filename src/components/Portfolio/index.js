@@ -28,10 +28,10 @@ function Portfolio() {
             github: 'https://github.com/daejo/wd-sched'
         },
         {
-          name: 'Travel Dashboard',
-          description: 'Web & Mobile Interactive Travel App',
-          link: 'https://itsrheine.github.io/Travel-Dashboard/',
-          github: 'https://github.com/itsrheine/Travel-Dashboard'
+          name: 'TransferCard',
+          description: 'Travel with ease with our new contactless virtual train ticket, transferCard.',
+          link: 'https://transfercard.herokuapp.com/',
+          github: 'https://github.com/itsrheine/transferCard'
         },
         {
             name: 'Budget Tracker',
